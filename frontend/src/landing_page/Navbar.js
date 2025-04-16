@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from "react";
 
 function Navbar() {
@@ -8,7 +8,7 @@ function Navbar() {
             style={{ backgroundColor: "#FFF" }}
         >
             <div class="container p-2">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/home">
                     <img
                         src="media/images/logo.svg"
                         style={{ width: "25%" }}
