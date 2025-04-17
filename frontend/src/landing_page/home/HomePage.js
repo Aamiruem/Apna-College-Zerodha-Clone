@@ -5,19 +5,19 @@ import Stats from './Stats'; // Update this based on the correct location
 import Pricing from './Pricings'; 
 import Education from './Education';
 import OpenAccount from '../OpenAccount';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+// import Navbar from '../Navbar';
+// import Footer from '../Footer';
 function HomePage() {
     return ( 
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <Hero />
             <Awards />
             <Stats />
             <Pricing/>
             <Education />
             <OpenAccount />
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

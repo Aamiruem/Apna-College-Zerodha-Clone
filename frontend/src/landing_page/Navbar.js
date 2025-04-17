@@ -8,9 +8,9 @@ function Navbar() {
             style={{ backgroundColor: "#FFF" }}
         >
             <div class="container p-2">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="./home">
                     <img
-                        src="media/images/logo.svg"
+                        src="media/logo.svg"
                         style={{ width: "25%" }}
                         alt="Logo"
                     />
@@ -29,30 +29,26 @@ function Navbar() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <form class="d-flex" role="search">
                         <ul class="navbar-nav mb-lg-0">
+                            
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">
-                                    Signup
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                                <button class="nav-link active" style={{ background: "none", border: "none", padding: 0 }}>
                                     About
-                                </a>
+                                </button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                                <button class="nav-link active" style={{ background: "none", border: "none", padding: 0 }}>
                                     Product
-                                </a>
+                                </button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                                <button class="nav-link active" style={{ background: "none", border: "none", padding: 0 }}>
                                     Pricing
-                                </a>
+                                </button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">
+                                <button class="nav-link active" style={{ background: "none", border: "none", padding: 0 }}>
                                     Support
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </form>

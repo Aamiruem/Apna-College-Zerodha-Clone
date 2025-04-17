@@ -6,14 +6,14 @@ function Footer() {
       <div className="container border-top mt-5">
         <div className="row mt-5">
           <div className="col">
-            <img src="media/images/logo.svg" style={{ width: "50%" }} />
+            <img src="media/logo.svg" alt="Company Logo" style={{ width: "20%" }} />
             <p>
               &copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <a href="#about">About</a>
             <br />
             <a href="">Products</a>
             <br />
