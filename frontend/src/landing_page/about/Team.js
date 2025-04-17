@@ -13,15 +13,15 @@ function Team() {
       >
         <div className="col-6 p-3 text-center">
           <img
-            src="media/images/nithinKamath.jpg"
+            src="media/nithinKamath.jpg"
             style={{ borderRadius: "100%", width: "50%" }}
           />
-          <h4 className="mt-5">Nithin Kamath</h4>
+          <h4 className="mt-5">Aamir Hussain</h4>
           <h6>Founder, CEO</h6>
         </div>
         <div className="col-6 p-3">
           <p>
-            Nithin bootstrapped and founded Zerodha in 2010 to overcome the
+            Aamir bootstrapped and founded Zerodha in 2010 to overcome the
             hurdles he faced during his decade long stint as a trader. Today,
             Zerodha has changed the landscape of the Indian broking industry.
           </p>
