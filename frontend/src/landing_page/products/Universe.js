@@ -11,27 +11,28 @@ function Universe() {
         </p>
 
         <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
+          <img src="media/smallcaseLogo.png" alt=""/>
           <p className="text-small text-muted">Thematic investment platform</p>
         </div>
         <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
+          <img src="media/streakLogo.png" alt="" height="100px" width="200px"/>
+          <p className="text-small text-muted">Algo & strategy  platform</p>
+        </div>
+        <br></br>
+        <div className="col-4 p-3 mt-5">
+          <img src="media/sensibullLogo.svg" alt="" height="100px" width="200px"/>
+          <p className="text-small text-muted">options trading  platform</p>
+        </div>
+        <div className="col-4 p-3 mt-5">
+          <img src="media/zerodhaFundHouse.png" alt="" height="100px" width="200px"/>
           <p className="text-small text-muted">Thematic investment platform</p>
         </div>
         <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
+          <img src="media/goldenpiLogo.png" alt="" height="100px" width="200px"/>
           <p className="text-small text-muted">Thematic investment platform</p>
         </div>
         <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" />
+          <img src="media/dittoLogo.png" alt="" height="100px" width="200px"/>
           <p className="text-small text-muted">Thematic investment platform</p>
         </div>
         <button

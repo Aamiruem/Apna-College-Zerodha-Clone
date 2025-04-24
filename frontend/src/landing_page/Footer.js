@@ -15,7 +15,7 @@ function Footer() {
             <p>Company</p>
             <a href="#about">About</a>
             <br />
-            <a href="">Products</a>
+            <a href="#product">Products</a>
             <br />
             <a href="">Pricing</a>
             <br />

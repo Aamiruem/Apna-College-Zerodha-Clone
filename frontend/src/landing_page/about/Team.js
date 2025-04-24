@@ -14,7 +14,7 @@ function Team() {
         <div className="col-6 p-3 text-center">
           <img
             src="media/nithinKamath.jpg"
-            style={{ borderRadius: "100%", width: "50%" }}
+            style={{ borderRadius: "100%", width: "20%" }}
           />
           <h4 className="mt-5">Aamir Hussain</h4>
           <h6>Founder, CEO</h6>
@@ -31,8 +31,8 @@ function Team() {
           </p>
           <p>Playing basketball is his zen.</p>
           <p>
-            Connect on <a href="">Homepage</a> / <a href="">TradingQnA</a> /{" "}
-            <a href="">Twitter</a>
+            Connect on <a href="/">Homepage</a> / <a href="">TradingQnA</a> /{" "}
+            <a href="/">Twitter</a>
           </p>
         </div>
       </div>

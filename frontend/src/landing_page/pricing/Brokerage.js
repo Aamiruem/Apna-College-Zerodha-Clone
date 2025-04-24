@@ -36,7 +36,7 @@ function Brokerage() {
           </ul>
         </div>
         <div className="col-4 p-4">
-          <a href="" style={{ textDecoration: "none" }}>
+          <a href="" style={{ textDecoration: "none"  }}>
             <h3 className="fs-5">List of charges</h3>
           </a>
         </div>
