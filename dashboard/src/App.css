@@ -36,3 +36,71 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.funds, .row, .col, .data {
+  padding: 10px;
+}
+.table {
+  border: 1px solid #ccc;
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+
+
+.watchlist-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+
+.watchlist-container {
+  padding: 20px;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.itemInfo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.up {
+  color: green;
+}
+.down {
+  color: red;
+}
+.actions {
+  margin-left: 20px;
+}
+.buy, .sell, .action {
+  margin: 5px;
+}

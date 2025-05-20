@@ -844,3 +844,14 @@ hr {
 
 
 
+.funds, .row, .col, .data {
+  padding: 10px;
+}
+.table {
+  border: 1px solid #ccc;
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}

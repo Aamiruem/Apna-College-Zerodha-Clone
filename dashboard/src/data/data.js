@@ -191,3 +191,62 @@ export const positions = [
     isLoss: true,
   },
 ];
+
+
+// alternate watchlist
+export const watchlist2 = [
+  {
+    name: "HDFC",
+    price: 512.4,
+    percent: "1.04%",
+    isDown: false,
+  },
+  {
+    name: "HUL",
+    price: 512.4,
+    percent: "1.04%",
+    isDown: false,
+  },
+];
+
+
+
+// Funds
+export const funds = [
+  {
+  name: "HDFC",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+{
+  name: "HUL",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+{
+  name: "HDFC",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+{
+  name: "HUL",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+{
+  name: "HDFC",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+{
+  name: "HUL",
+  price: 512.4,
+  percent: "1.04%",
+  isDown: false,
+},
+];
