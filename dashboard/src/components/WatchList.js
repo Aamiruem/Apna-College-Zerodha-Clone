@@ -175,11 +175,3 @@ const WatchListActions = ({ uid }) => {
     </span>
   );
 };
-
-
-
-
-
-
-
-
