@@ -212,7 +212,7 @@ export const watchlist2 = [
 
 
 // Funds
-export const funds = [
+export const Funds = [
   {
   name: "HDFC",
   price: 512.4,
