@@ -5,7 +5,7 @@
 // const express = require('express');
 // const mongoose = require('mongoose');
 
-// const {HoldingModel} = require('./model/HoldingModel');
+// const {HoldingsModel} = require('./model/HoldingsModel');
 
 // const PORT = process.env.PORT || 3002;
 // const uri = process.env.MONGO_URL;
@@ -118,10 +118,10 @@
 
 //     try {
 //         // Delete existing holdings
-//         await HoldingModel.deleteMany({});
+//         await HoldingsModel.deleteMany({});
 
 //         // Insert new holdings
-//         const savedHoldings = await HoldingModel.insertMany(tempHoldings);
+//         const savedHoldings = await HoldingsModel.insertMany(tempHoldings);
 //         res.status(200).json({message: "Holdings added successfully", data: savedHoldings});
 //     } catch (error) {
 //         console.error("Error adding holdings:", error);
@@ -161,7 +161,7 @@
 // require('dotenv').config();
 // const express = require('express');
 // const mongoose = require('mongoose');
-// const { HoldingModel } = require('./model/HoldingModel');
+// const { HoldingsModel } = require('./model/HoldingsModel');
 
 // const PORT = process.env.PORT || 3002;
 // const uri = process.env.MONGO_URL;
@@ -184,8 +184,8 @@
 //     ];
 
 //     try {
-//         await HoldingModel.deleteMany({}); // Clear existing holdings
-//         const savedHoldings = await HoldingModel.insertMany(tempHoldings);
+//         await HoldingsModel.deleteMany({}); // Clear existing holdings
+//         const savedHoldings = await HoldingsModel.insertMany(tempHoldings);
 //         res.status(200).json({ message: "Holdings added successfully", data: savedHoldings });
 //     } catch (error) {
 //         console.error("Error adding holdings:", error);
@@ -222,7 +222,7 @@
 
 // const express = require('express');
 // const mongoose = require('mongoose');
-// const { HoldingModel } = require('./model/HoldingModel');
+// const { HoldingsModel } = require('./model/HoldingsModel');
 
 
 
@@ -338,7 +338,7 @@
 //     ];
 
 //     tempPositions.forEach((item) => {
-//         let newHoldings = new HoldingModel({
+//         let newHoldings = new HoldingsModel({
 //             name: item.name,
 //             qty: item.qty,
 //             avg: item.avg,
@@ -385,7 +385,7 @@ require('dotenv').config();
 
 // const express = require('express');
 // const mongoose = require('mongoose');
-// const { HoldingModel } = require('./model/HoldingModel');
+// const { HoldingsModel } = require('./model/HoldingsModel');
 
 // const PORT = process.env.PORT || 3002;
 // const uri = process.env.MONGO_URL;
@@ -503,7 +503,7 @@ require('dotenv').config();
 //     try {
 //         // Using Promise.all for parallel saving
 //         await Promise.all(tempPositions.map(item => {
-//             const newHoldings = new HoldingModel({
+//             const newHoldings = new HoldingsModel({
 //                 name: item.name,
 //                 qty: item.qty,
 //                 avg: item.avg,
@@ -556,7 +556,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 // const { json } = require('body-parser');
 
-const { HoldingModel } = require('./model/HoldingModel');
+const { HoldingsModel } = require('./model/HoldingsModel');
 const { PositionsModel } = require('./model/PositionsModel');
 const { OrdersModel } = require('./model/OrdersModel');
 
@@ -572,23 +572,32 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/allHoldings', async (req, res) => {
-    let allHoldings = await HoldingModel.find({});
+    let allHoldings = await HoldingsModel.find({});
     // res.send(allHoldings);
     res.json(allHoldings);
 });
 
 
 
-app.get('/allPositions', async (req, res) => {
-    let allPositions = await HoldingModel.find({});
+app.get('/allPositions', async (req, res) => { // get means send the data for user 
+    let allPositions = await PositionsModel.find({});
     // res.send(allHoldings);
     res.json(allPositions);
+
+
+    
 });
 
 
-app.post('/newOrder', async (req, res) => {
-    
-    let newOrder = new HoldingModel({  });
+app.post('/newOrder', async (req, res) => {// post means get the data from user
+    let newOrder = new OrdersModel({ 
+        name: req.body.name,
+        qty: req.body.qty,
+        avg: req.body.avg,
+        price: req.body.price,
+        net: req.body.net,
+        day: req.body.day
+    });
     newOrder.save();
     res.send("Order saved!", newOrder);
 })
@@ -615,7 +624,7 @@ app.listen(PORT, () => {
 // const bodyParser = require('body-parser');
 // const cors = require('cors');
 
-// const { HoldingModel } = require('./model/HoldingModel');
+// const { HoldingsModel } = require('./model/HoldingsModel');
 // const { PositionsModel } = require('./model/PositionsModel');
 // const { OrdersModel } = require('./model/OrdersModel');
 
@@ -631,7 +640,7 @@ app.listen(PORT, () => {
 // // Route: Get all holdings
 // app.get('/allHoldings', async (req, res) => {
 //     try {
-//         const allHoldings = await HoldingModel.find({});
+//         const allHoldings = await HoldingsModel.find({});
 //         res.json(allHoldings);
 //     } catch (error) {
 //         console.error("Error fetching holdings:", error);

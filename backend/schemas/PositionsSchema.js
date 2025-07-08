@@ -1,17 +1,19 @@
-// const { schema } = require("mongoose");
 
-// const {model } = schema.Types;
+// // backend/schema/PositionsSchema.js
 
-// const PositionsSchema = new schema({
+// const mongoose = require('mongoose');
+
+// const positionsSchema = new mongoose.Schema({
 //     name: String,
 //     qty: Number,
 //     avg: Number,
 //     price: Number,
 //     net: String,
 //     day: String,
+//     isLoss: Boolean
 // });
 
-// module.exports = { PositionsSchema };
+// module.exports = positionsSchema;
 
 
 
@@ -41,11 +43,17 @@
 
 
 
-// backend/schema/PositionsSchema.js
+
+
+
+
+
+
+
 
 const mongoose = require('mongoose');
 
-const positionsSchema = new mongoose.Schema({
+const PositionsSchema = new mongoose.Schema({
     name: String,
     qty: Number,
     avg: Number,
@@ -55,4 +63,5 @@ const positionsSchema = new mongoose.Schema({
     isLoss: Boolean
 });
 
-module.exports = positionsSchema;
+// export model or schema
+module.exports = { PositionsSchema };

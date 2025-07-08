@@ -1,40 +1,47 @@
-// const { Schema} = require("mongoose");
+// // backend/schema/OrdersSchema.js
 
-// const OrdersSchema = new Schema({
+// const mongoose = require('mongoose');
+
+// const ordersSchema = new mongoose.Schema({
 //     name: String,
 //     qty: Number,
-//     avg: Number,
-//     price: Number,
-//     net: String,
-//     day: String,
+//     orderType: {
+//         type: String,
+//         enum: ['BUY', 'SELL'],
+//         default: 'BUY'
+//     },
+//     orderPrice: Number,
+//     executed: {
+//         type: Boolean,
+//         default: false
+//     },
+//     timestamp: {
+//         type: Date,
+//         default: Date.now
+//     }
 // });
 
-// module.exports = { OrdersSchema };
+// module.exports = ordersSchema;
 
 
 
 
-// backend/schema/OrdersSchema.js
 
-const mongoose = require('mongoose');
 
-const ordersSchema = new mongoose.Schema({
+
+
+
+
+
+const { Schema } = require("mongoose");
+
+const OrdersSchema = new Schema({
     name: String,
     qty: Number,
-    orderType: {
-        type: String,
-        enum: ['BUY', 'SELL'],
-        default: 'BUY'
-    },
-    orderPrice: Number,
-    executed: {
-        type: Boolean,
-        default: false
-    },
-    timestamp: {
-        type: Date,
-        default: Date.now
-    }
+    avg: Number,
+    price: Number,
+    net: String,
+    day: String,
 });
 
-module.exports = ordersSchema;
+module.exports = { OrdersSchema };
