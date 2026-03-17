@@ -1,26 +1,9 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// function Signup() {
-//     return (
-//         <h1>
-//             Signup
-//         </h1>
-//      );
-// }
-
-// export default Signup;
-
-
-
-
 // import React, { useState } from "react";
 // import axios from "axios";
 
-// function Signup() {
+// function Login() {
 
 //   const [user, setUser] = useState({
-//     name: "",
 //     email: "",
 //     password: ""
 //   });
@@ -36,7 +19,7 @@
 //     e.preventDefault();
 
 //     try {
-//       const res = await axios.post("http://localhost:3002/signup", user);
+//       const res = await axios.post("http://localhost:3002/login", user);
 //       alert(res.data.message);
 //     } catch (err) {
 //       console.log(err);
@@ -45,18 +28,10 @@
 
 //   return (
 //     <div>
-//       <h2>Signup</h2>
+
+//       <h2>Login</h2>
 
 //       <form onSubmit={handleSubmit}>
-
-//         <input
-//           type="text"
-//           name="name"
-//           placeholder="Name"
-//           onChange={handleChange}
-//         />
-
-//         <br /><br />
 
 //         <input
 //           type="email"
@@ -76,26 +51,26 @@
 
 //         <br /><br />
 
-//         <button type="submit">Signup</button>
+//         <button type="submit">Login</button>
 
 //       </form>
+
 //     </div>
 //   );
 // }
 
-// export default Signup;
+// export default Login;
 
 
 
 
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; // ✅ FIX
-import "./Signup.css";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
-function Signup() {
+function Login() {
     const [user, setUser] = useState({
-        name: "",
         email: "",
         password: "",
     });
@@ -110,24 +85,25 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // ✅ Validation
-        if (!user.name || !user.email || !user.password) {
+        // ✅ Basic validation
+        if (!user.email || !user.password) {
             alert("Please fill all fields");
             return;
         }
 
         try {
             const res = await axios.post(
-                "http://localhost:3002/api/signup", // ✅ FIXED URL
+                "http://localhost:3002/api/login", // ✅ FIXED URL (important)
                 user
             );
 
-            alert(res.data.message || "Signup Successful");
+            alert(res.data.message);
         } catch (err) {
             console.log(err);
 
+            // ✅ Better error handling
             if (err.response) {
-                alert(err.response.data.message || "Signup failed");
+                alert(err.response.data.message || "Login failed");
             } else {
                 alert("Server not responding");
             }
@@ -135,18 +111,10 @@ function Signup() {
     };
 
     return (
-        <div className="signup-container">
-            <h2>Create Account</h2>
+        <div className="login-container">
+            <h2>Login</h2>
 
             <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={user.name}
-                    onChange={handleChange}
-                />
-
                 <input
                     type="email"
                     name="email"
@@ -163,14 +131,14 @@ function Signup() {
                     onChange={handleChange}
                 />
 
-                <button type="submit">Signup</button>
+                <button type="submit">Login</button>
             </form>
 
             <p>
-                Already have an account? <Link to="/login">Login</Link> {/* ✅ FIX */}
+                Don't have an account? <Link to="/signup">Signup</Link>
             </p>
         </div>
     );
 }
 
-export default Signup;
+export default Login;
